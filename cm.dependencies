@@ -1,0 +1,10 @@
+[
+ {
+   "repository": "android_device_lge_e400",
+   "target_path": "device/lge/e400"
+ },
+ {
+   "repository": "lge_kernel_e400_V3",
+   "target_path": "kernel/lge/e400"
+ }
+]

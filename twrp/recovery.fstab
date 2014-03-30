@@ -1,0 +1,30 @@
+# Copyright (C) 2013 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# <src>	                                      <mnt_point>  <type>	<mnt_flags>	        <fs_mgr_flags>
+
+/dev/block/platform/msm_sdcc.3/by-num/p14       /system     ext4        ro,data=ordered,barrier=1,noatime             wait
+/dev/block/platform/msm_sdcc.3/by-num/p20      	/emmc	    vfat        defaults	                           nonremovable
+/dev/block/platform/msm_sdcc.3/by-num/p21	/data	    ext4        nosuid,nodev,noatime,barrier=1,noauto_da_alloc,errors=continue check
+/dev/block/platform/msm_sdcc.3/by-num/p9	/boot	    emmc        defaults 	                            defaults
+/dev/block/platform/msm_sdcc.3/by-num/p17	/recovery   emmc 	defaults	                            defaults
+/dev/block/platform/msm_sdcc.3/by-num/p15	/persist    ext4 	nosuid,nodev,barrier=1                      wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p16	/cache	    ext4 	nosuid,nodev,data=ordered,barrier=1         wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p18	/persist-lg ext4	nosuid,nodev,barrier=1                      wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p23	/mpt	    ext4	nosuid,nodev,barrier=1                      wait,check
+
+# SD card
+/dev/block/mmcblk1p1                     	/external_sd vfat      defaults                            voldmanaged=external_sd:auto
+
+

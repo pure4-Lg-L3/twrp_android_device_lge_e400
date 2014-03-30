@@ -1,0 +1,22 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+
+# <src>	                                      <mnt_point>  <type>	<mnt_flags>	<fs_mgr_flags>
+
+/dev/block/platform/msm_sdcc.3/by-num/p14       /system     ext4        ro,data=ordered,barrier=1,noatime           wait
+/dev/block/platform/msm_sdcc.3/by-num/p20	/emmc	    vfat        defaults	                            nonremovable
+/dev/block/platform/msm_sdcc.3/by-num/p21	/data	    ext4        nosuid,nodev,noatime,barrier=1,noauto_da_alloc,errors=continue check
+/dev/block/platform/msm_sdcc.3/by-num/p9	/boot	    emmc        defaults 	                            defaults
+/dev/block/platform/msm_sdcc.3/by-num/p17	/recovery   emmc 	defaults	                            defaults
+/dev/block/platform/msm_sdcc.3/by-num/p15	/persist    ext4 	nosuid,nodev,barrier=1                      wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p16	/cache	    ext4 	nosuid,nodev,data=ordered,barrier=1         wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p18	/persist-lg ext4	nosuid,nodev,barrier=1                      wait,check
+/dev/block/platform/msm_sdcc.3/by-num/p23	/mpt	    ext4	nosuid,nodev,barrier=1                      wait,check
+
+# External SD
+/dev/block/mmcblk1p1	                        /external_sd vfat	defaults	defaults #voldmanaged=external_sd:auto
+/dev/block/mmcblk0p2	                        /sd-ext      vfat	defaults	defaults #voldmanaged=sd-ext:auto
+	                       

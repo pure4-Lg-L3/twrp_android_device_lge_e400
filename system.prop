@@ -1,0 +1,59 @@
+# Copyright (C) 2013 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+#
+# system.prop for e400
+#
+ro.product.name=e400
+ro.product.model=LG-E400
+ro.product.brand=lge
+ro.product.device=e400
+ro.product.board=e400
+
+ro.sf.lcd_density=120
+
+debug.fb.rgb565=0
+debug.sf.hw=1
+debug.enabletr=false
+debug.composition.type=mdp
+ro.opengles.version=131072
+com.qc.hardware=true
+ro.sf.compbypass.enable=0
+
+persist.sys.use_dithering=1
+
+wifi.interface=wlan0
+
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+
+ro.telephony.ril.v3=signalstrength,datacall,singlepdp
+ro.telephony.ril_class=LGEQualcommUiccRIL
+ro.telephony.default_network=0
+telephony.lteOnGsmDevice=0
+
+ro.additionalmounts=/mnt/extra-sd
+ro.vold.switchablepair=/mnt/sdcard,/mnt/extra-sd
+
+persist.sys.usb.config=mtp,adb
+ro.setupwizard.enterprise_mode=1
+ro.com.android.dateformat=MM-dd-yyyy
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=32m
+dalvik.vm.heapsize=76m
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.adb.qemud=1
+dalvik.vm.lockprof.threshold=500

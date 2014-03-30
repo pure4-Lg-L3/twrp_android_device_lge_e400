@@ -1,4 +1,6 @@
-twrp_android_device_lge_e400
-============================
+android_device_lge_e400
+=======================
 
-twrp device tree
+TWRP ==> device tree for l3 (e400)
+
+pls note this is only twrp specific device tree
